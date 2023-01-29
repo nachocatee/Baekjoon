@@ -1,6 +1,6 @@
 sum_score_list = []
 
-for n in range(1, 6):
+for _ in range(5):
     score = map(int, input().split())
     sum_score_list.append(sum(score))
 
