@@ -5,7 +5,7 @@ for i in name:
     alpa_lst.append(i)
 alpa_lst_set = set(alpa_lst)
 alpa_lst_set = list(alpa_lst_set)
-alpa_lst_set.sort()
+# alpa_lst_set.sort()
 alpa_lst.sort()
 # print(alpa_lst_set) # ['A', 'B', 'C']
 # print(alpa_lst) # ['A', 'A', 'A', 'A', 'B', 'B', 'C]
