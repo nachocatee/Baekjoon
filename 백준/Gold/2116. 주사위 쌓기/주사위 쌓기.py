@@ -50,48 +50,17 @@ def dicepop(lst, n):
 
 N = int(input())
 dice = [list(map(int, input().split())) for _ in range(N)]
-dice_1 = copy.deepcopy(dice)
-dice_2 = copy.deepcopy(dice)
-dice_3 = copy.deepcopy(dice)
-dice_4 = copy.deepcopy(dice)
-dice_5 = copy.deepcopy(dice)
-dice_6 = copy.deepcopy(dice)
+
 stack = []
 tmp = []
 res = []
-for i in range(len(dice_1)):
-    dicepop(dice_1[i], 1)
-    tmp.append(max(dice_1[i]))
-res.append(sum(tmp))
-tmp.clear()
-stack.clear()
-for i in range(len(dice_2)):
-    dicepop(dice_2[i], 2)
-    tmp.append(max(dice_2[i]))
-res.append(sum(tmp))
-tmp.clear()
-stack.clear()
-for i in range(len(dice_3)):
-    dicepop(dice_3[i], 3)
-    tmp.append(max(dice_3[i]))
-res.append(sum(tmp))
-tmp.clear()
-stack.clear()
-for i in range(len(dice_4)):
-    dicepop(dice_4[i], 4)
-    tmp.append(max(dice_4[i]))
-res.append(sum(tmp))
-tmp.clear()
-stack.clear()
-for i in range(len(dice_5)):
-    dicepop(dice_5[i], 5)
-    tmp.append(max(dice_5[i]))
-res.append(sum(tmp))
-tmp.clear()
-stack.clear()
-for i in range(len(dice_6)):
-    dicepop(dice_6[i], 6)
-    tmp.append(max(dice_6[i]))
-res.append(sum(tmp))
+for i in range(1, 7):
+    dice_copy = copy.deepcopy(dice)
+    for j in range(len(dice_copy)):
+        dicepop(dice_copy[j], i)
+        tmp.append(max(dice_copy[j]))
+    res.append(sum(tmp))
+    tmp.clear()
+    stack.clear()
 
 print(max(res))
