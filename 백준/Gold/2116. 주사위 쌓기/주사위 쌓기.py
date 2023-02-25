@@ -56,7 +56,7 @@ tmp = []
 res = []
 for i in range(1, 7):
     dice_copy = copy.deepcopy(dice)
-    for j in range(len(dice_copy)):
+    for j in range(N):
         dicepop(dice_copy[j], i)
         tmp.append(max(dice_copy[j]))
     res.append(sum(tmp))
