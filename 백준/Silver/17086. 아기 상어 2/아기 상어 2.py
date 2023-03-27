@@ -15,19 +15,15 @@ for i in range(N):
             visited[i][j] = 1
 
 
-def bfs():
-    while q:
-        x, y = q.pop(0)
-        for d in range(8):
-            nx, ny = x + dx[d], y + dy[d]
-            if 0 <= nx < N and 0 <= ny < M:
-                if board[nx][ny] == 0 and not visited[nx][ny]:
-                    visited[nx][ny] = visited[x][y] + 1
-                    q.append((nx, ny))
-    return
+while q:
+    x, y = q.pop(0)
+    for d in range(8):
+        nx, ny = x + dx[d], y + dy[d]
+        if 0 <= nx < N and 0 <= ny < M:
+            if board[nx][ny] == 0 and not visited[nx][ny]:
+                visited[nx][ny] = visited[x][y] + 1
+                q.append((nx, ny))
 
-
-bfs()
 # for i in visited:
 #     print(i)
 
