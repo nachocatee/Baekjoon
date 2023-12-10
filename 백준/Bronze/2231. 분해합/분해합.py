@@ -11,6 +11,6 @@ while int(num) < int(N):
     else:
         num = str(int(num) + 1)
 if res_list:
-    print(max(res_list))
+    print(min(res_list))
 else:
     print(0)
