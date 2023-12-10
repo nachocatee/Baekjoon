@@ -1,15 +1,15 @@
-N = input()
+N = int(input())
 ans = 0
-num = '1'
-while int(num) < int(N):
-    tmp = int(num)
-    for i in num:
+num = 1
+while num < N:
+    tmp = num
+    for i in str(num):
         tmp += int(i)
-    if tmp == int(N):
-        ans = int(num)
+    if tmp == N:
+        ans = num
         break
     else:
-        num = str(int(num) + 1)
+        num += 1
 if ans:
     print(ans)
 else:
