@@ -1,16 +1,16 @@
 N = input()
-res_list = []
+ans = 0
 num = '1'
 while int(num) < int(N):
     tmp = int(num)
     for i in num:
         tmp += int(i)
     if tmp == int(N):
-        res_list.append(int(num))
+        ans = int(num)
         break
     else:
         num = str(int(num) + 1)
-if res_list:
-    print(min(res_list))
+if ans:
+    print(ans)
 else:
     print(0)
